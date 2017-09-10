@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width = device-width, initial-scale=1'>
     <title>Encrypto</title>
-    <!--JS-->
-    <script src="js/encryptor.js"></script>
-    <script src="jquery/jquery-3.2.1.min.js"></script>
+    
     <!--styling-->
     <link rel='stylesheet' href='css/base.css'>
   </head>
 
   <body>
-    <form>
+
       <fieldset>
         <legend><h1>Encrypto</h1></legend>
           <label for = 'keyLabel'>Encryption Key:</label>
-            <input type="text" id='key'><br><br>
+            <input type="text" side='16' name = 'key' id='key' placeholder="Example Key"><br><br>
           <label for = 'inputLabel'>Input:</label>
-            <textarea id = 'input' rows='10'></textarea><br>
+            <textarea name = 'input' id = 'input' rows='10' placeholder='Text to be encsrypted'></textarea><br>
           <label for = 'encryptLabel'>
-            <input type = 'button' class='btnFormat' id ='encrypt' value = 'Encrypt'></label>
+            <input type = 'button' class='btnFormat' id ='encryptButton' value = 'Encrypt'></label>
           <label for = 'decryptLabel'>
-            <input type = 'button' id ='decrypt' value = 'Decrypt'></label><br><br>
+            <input type = 'button' class='btnFormat' id ='decryptButton' value = 'Decrypt'></label><br><br>
           <label for = 'outputLabel'>Output:</label>
-            <textarea id = 'output' rows='10'></textarea><br>
+            <textarea name='output' id = 'output' rows='10'></textarea><br>
       </fieldset>
-    </form>
+
+
+      <!--JS-->
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/encryptor.js"></script>
+    
+  
   </body>
+</html>
