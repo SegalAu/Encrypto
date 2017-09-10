@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "Encrypto",
+	"version": "2.0",
+	"description": "TEA-based text encryption application",
+
+
+	"browser_action":{
+		"default_title": "Encrypto",
+		"default_icon": "encryptologo.png",
+		"default_popup": "index.html"
+	}
+}
