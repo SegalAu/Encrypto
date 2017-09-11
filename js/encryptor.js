@@ -22,11 +22,11 @@ function encryptText(){
   val = escape(document.getElementById('input').value);
   key = document.getElementById('key').value;
   console.log('reached encryptText');
-  
+
   var v = new Array(2);
   var i;
   var returnVal = "";
-  var k = new Array(4); 
+  var k = new Array(4);
 
   k[0] = str2long(key.substr(0,4));
   k[1] = str2long(key.substr(4,4));
@@ -65,7 +65,7 @@ function decryptText(){
   var v = new Array(2);
   var i;
   var returnVal = "";
-  var k = new Array(4); 
+  var k = new Array(4);
 
   k[0] = str2long(key.substr(0,4));
   k[1] = str2long(key.substr(4,4));
@@ -107,7 +107,7 @@ function str2long(str){
           (str.charCodeAt(2) << 16) +
           (str.charCodeAt(3) << 24);
           console.log(l);
-  return(l);
+  return(isNaN(l) ? 0 : l);
 }
 
 /*long2str:
@@ -139,7 +139,7 @@ function encryptPair(v, k){
   var delta = 0x9e3779b9;
   var a = v[0];
   var b = v[1];
-  var k0 = k[0], k1 = k[1], k2 = k[2], k3 = k[3]; 
+  var k0 = k[0], k1 = k[1], k2 = k[2], k3 = k[3];
   //taken from TEA encryption algorithm by David Wheeler and Roger Needham
   for(i=0;i<numBits;i++){
     sum+=delta;
@@ -169,7 +169,7 @@ function decryptPair(v, k){
   var delta = 0x9e3779b9;
   var a = v[0];
   var b = v[1];
-  var k0 = k[0], k1 = k[1], k2 = k[2], k3 = k[3]; 
+  var k0 = k[0], k1 = k[1], k2 = k[2], k3 = k[3];
   //taken from TEA encryption algorithm by David Wheeler and Roger Needham
   for(i=0;i<numBits;i++){
     b-=((a<<4)+k2)^(a+sum)^((a>>>5)+k3);
