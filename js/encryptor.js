@@ -19,7 +19,7 @@ function encryptText(){
   //split val text into 2 32bit unsigned integers for all text
   //k:    formatted key (128 bits)
   //returnVal: encrypted text to be returned (string)
-  val = escape(document.getElementById('input').value);
+  val = document.getElementById('input').value;
   key = document.getElementById('key').value;
   console.log('reached encryptText');
 
@@ -50,7 +50,7 @@ function encryptText(){
 
   //return encrypted string
   console.log(returnVal);
-  output.value = escape(returnVal);
+  output.value = returnVal;
 }
 
 function decryptText(){
@@ -59,7 +59,7 @@ function decryptText(){
   //split val text into 2 32bit unsigned integers for all text
   //k:    formatted key (128 bits)
   //returnVal: encrypted text to be returned (string)
-  val = unescape(document.getElementById('input').value);
+  val = document.getElementById('input').value;
   key = document.getElementById('key').value;
 
   var v = new Array(2);
@@ -90,7 +90,7 @@ function decryptText(){
   }
 
   //return encrypted string
-  output.value = unescape(returnVal);
+  output.value = returnVal;
 }
 
 
