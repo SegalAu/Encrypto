@@ -2,6 +2,7 @@ Encrypto
 Text-based TEA Encryption application
 Adapted into Chrome Extension
 
+![](EncryptoTutorial.gif)
 
 1) Download and Extract Zip File
 2) Open chrome://extensions and select 'Developer Mode'
